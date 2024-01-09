@@ -129,60 +129,50 @@ img {
     SOLUZIONE RESPONSIVE
  ************************************************/
 
-/* media query laptop */
-@media screen and (max-width: 1160px) {
-    .container {
-        width: 100%;
-    }
+/* BONUS - correzione width */
+.container {
+    max-width: 1140px;
+    width: auto;
 }
 
-
 /* media query tablet */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768) {
     .container {
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
-
 }
 
 /* media query mobile */
 @media screen and (max-width: 480px) {
-
-
-    .container {
-        width: 100%;
+    .site-header {
+        padding: 0 20px;
     }
-
 
     .row {
-        flex-wrap: wrap;
-        row-gap: 48px;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
     }
 
-    .lessons .col {
+    /* rimuovo il padding da tutte le col */
+    .row .col {
         width: 100%;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
+    /* rimuovo il margin bottom di steps */
     .steps {
-        margin-top: 3rem;
         margin-bottom: 0;
-    }
-
-    .steps .col {
-        width: 100%;
     }
 
     .why-us {
-        background-color: #1E1E1E;
+        /* compenso l'eliminazione del margin bottom con il padding */
+        padding-top: 40px;
+        padding-bottom: 48px;
         margin-bottom: 0;
-        padding: 3rem 0;
-    }
 
-    .why-us .col {
-        width: 100%;
+        /* cambio il back color della sezione why-us */
+        background-color: #222222;
     }
-
 }
